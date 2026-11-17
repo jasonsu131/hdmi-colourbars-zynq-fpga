@@ -15,13 +15,7 @@ Video output over HDMI built from the ground up in Verilog. The design generates
 
 ## Architecture
 
-```
-            ┌──────────────┐  25.175 MHz   ┌──────────────────┐  RGB + sync + DE  ┌──────────┐   TMDS
-100 MHz ──▶ │ Clocking     │ ────────────▶ │ Timing generator │ ────────────────▶ │ rgb2dvi  │ ──────▶ HDMI
-            │ Wizard (MMCM)│ ─────┐        │ + colour bars    │                   │ (TMDS)   │
-            └──────────────┘      │        └──────────────────┘                   └──────────┘
-                                  └──── 125.875 MHz (5×) serial clock ────────────────▲
-```
+![Architecture block diagram](docs/architecture.svg)
 
 | File | What it does |
 |---|---|
